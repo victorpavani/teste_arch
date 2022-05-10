@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { useNavigate } from "react-router-dom";
 
 
 const Container = styled.div`
@@ -44,14 +45,20 @@ const Button = styled.button`
 `;
 
 const CategoryItem = ({ item }) => {
+  let navigate = useNavigate();
+
+
+
   return (
+
     <Container>
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>
-        <Button on>COMPRAR</Button>
+        <Button onClick={() => { navigate("/" + item.rota) }}>COMPRAR</Button>
       </Info>
     </Container>
+
   );
 };
 

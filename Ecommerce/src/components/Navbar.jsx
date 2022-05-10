@@ -1,8 +1,11 @@
 import { Badge } from "@material-ui/core";
-import { Search, ShoppingCartOutlined } from "@material-ui/icons";
-import React from "react";
+import { ShoppingCartOutlined } from "@material-ui/icons";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { useNavigate } from "react-router-dom";
+import { FaBars } from 'react-icons/fa'
+import Sidebar from '../components/Sidebar';
 
 const Container = styled.div`
   height: 60px;
@@ -67,24 +70,24 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = () => {
+  let navigate = useNavigate();
+  const [sidebar, setSidebar] = useState(false)
+
+  const showSiderbar = () => setSidebar(!sidebar)
+
   return (
     <Container>
       <Wrapper>
         <Left>
-          {/* <Language>EN</Language> */}
-          {/* <SearchContainer>
-            <Input placeholder="Search" />
-            <Search style={{ color: "gray", fontSize: 16 }} />
-          </SearchContainer> */}
+          <FaBars onClick={showSiderbar} />
+          {sidebar && <Sidebar active={setSidebar} />}
         </Left>
-        <Center>
+        <Center onClick={() => { navigate("/") }}>
           <Logo>ARCH STORE</Logo>
         </Center>
         <Right>
-          {/* <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem> */}
-          <MenuItem>
-            <Badge badgeContent={4} color="secondary">
+          <MenuItem onClick={() => { navigate("/Cart") }}>
+            <Badge badgeContent={2} color="secondary">
               <ShoppingCartOutlined />
             </Badge>
           </MenuItem>

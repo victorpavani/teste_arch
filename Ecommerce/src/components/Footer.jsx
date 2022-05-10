@@ -89,11 +89,6 @@ const Footer = () => {
     <Container>
       <Left>
         <Logo>ARCH STORE</Logo>
-        {/* <Desc>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don’t look even slightly believable.
-        </Desc> */}
         <SocialContainer>
           <SocialIcon color="3B5999">
             <Facebook />
@@ -122,7 +117,6 @@ const Footer = () => {
         <ContactItem>
           <MailOutline style={{ marginRight: "10px" }} /> contato@archstore.com.br
         </ContactItem>
-        {/* <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" /> */}
       </Right>
     </Container>
   );

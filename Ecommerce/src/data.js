@@ -26,16 +26,19 @@ export const categories = [
   {
     id: 1,
     img: "https://kinsta.com/wp-content/uploads/2021/03/best-programming-language-to-learn.png",
+    rota: "Livros",
     title: "LIVROS",
   },
   {
     id: 2,
     img: "https://ih1.redbubble.net/image.460530321.9742/ssrco,classic_tee,two_models,101010:01c5ca27c6,front,square_three_quarter,1000x1000.u2.jpg",
+    rota: "ProductList",
     title: "CAMISETAS",
   },
   {
     id: 3,
     img: "https://miro.medium.com/max/873/1*043pHI4FMvM8rTDxF07uMw.jpeg",
+    rota: "Acessorios",
     title: "ACESSÓRIOS",
   },
 ];

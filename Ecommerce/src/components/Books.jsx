@@ -1,6 +1,6 @@
 import {
-  FavoriteBorderOutlined,
-  SearchOutlined,
+  EditOutlined,
+  DeleteOutline,
   ShoppingCartOutlined,
 } from "@material-ui/icons";
 import styled from "styled-components";
@@ -44,7 +44,7 @@ const Container = styled.div`
 
 const Image = styled.img`
   margin-top: 5%;
-  height: 60%;
+  height: 55%;
   z-index: 2;
 `;
 
@@ -69,7 +69,7 @@ const Title = styled.h1`
 margin: 25px;
 font-size: 20px;
 justify-content: center;  
-margin-top: 100%;
+margin-top: 89%;
 margin-bottom: 0%;
   z-index: 4;
   position: absolute;
@@ -79,7 +79,7 @@ const Price = styled.h1`
 margin: 25px;
 font-size: 20px;
 justify-content: center;
-margin-top: 90%;  
+margin-top: 80%;  
 margin-bottom: 0%;
   z-index: 4;
   position: absolute;
@@ -90,16 +90,17 @@ margin: 35px;
 font-size: 13px;
 align-items: center;
 justify-content: center;
-margin-top: 115%;  
+margin-top: 110%;  
 margin-bottom: 0%;
   z-index: 4;
   position: absolute;
 `;
 
-const Product = ({ item }) => {
+
+
+const Books = ({ item }) => {
   return (
     <Container>
-      {/* <Circle /> */}
       <Image src={item.img} />
       <Price>R$ {item.price}</Price>
       <Title>{item.name}</Title>
@@ -108,15 +109,15 @@ const Product = ({ item }) => {
         <Icon>
           <ShoppingCartOutlined />
         </Icon>
-        {/* <Icon>
-          <SearchOutlined />
-        </Icon> */}
-        {/* <Icon>
-          <FavoriteBorderOutlined />
-        </Icon> */}
+        <Icon>
+          <DeleteOutline />
+        </Icon>
+        <Icon>
+          <EditOutlined />
+        </Icon>
       </Info>
     </Container>
   );
 };
 
-export default Product;
+export default Books;
